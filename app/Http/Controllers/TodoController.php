@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Todo;
+
 class TodoController extends Controller
 {
     public function index(){
@@ -77,7 +79,7 @@ class TodoController extends Controller
 
 
         $todo = new Todo();
-        //On the left is the field name in DB and on the right is field name in Form/view
+        
         $todo->name = $data['name'];
         $todo->description = $data['description'];
         $todo->save();
